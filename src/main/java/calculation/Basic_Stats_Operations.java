@@ -11,17 +11,17 @@ import java.util.HashMap;
  *
  * @author tranh
  */
-public final class Basic_Stats_Utilities {
+public final class Basic_Stats_Operations {
 
     //sample set
     public double[] array;
     
     //calculate mean of a set
-    public Basic_Stats_Utilities(double[] array) {
+    public Basic_Stats_Operations(double[] array) {
         this.array = array;
     }
     
-    public Basic_Stats_Utilities(int[] array){
+    public Basic_Stats_Operations(int[] array){
         this.array = convert(array);
     }
 
@@ -96,7 +96,7 @@ public final class Basic_Stats_Utilities {
     }
     
     public double get_z_score(int point){
-        return (point*1.0 - get_mean())/get_standard_deviation();
+        return this.get_z_score(point*1.0);
     }
     
     //Convert set of integers to equivalent floats
